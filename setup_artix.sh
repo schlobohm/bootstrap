@@ -54,7 +54,7 @@ echo "Done!"
 # Packages from PACKAGES array
 for p in ${PACKAGES[@]}; do
   echo "Installing $t ..."
-  yes | sudo pacman -S $t
+  sudo pacman --noconfirm -S $t
   echo "Done!"
 done
 
