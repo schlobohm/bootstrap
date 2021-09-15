@@ -79,3 +79,21 @@ qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
     }"
 
 echo "Done!"
+
+echo "Optimizing Artix ..."
+
+echo "Making adjustments to grub user settings (backup copied to /tmp/etc_default_grub.bak) ..."
+cp /etc/default/grub /tmp/etc_default_grub.bak
+RESUME=$(cat /etc/default/grub | grep GRUB_CMDLINE_LINUX_DEFAULT | awk -F'resume=' '{print $2}')
+sudo sed -i "/GRUB_CMDLINE_LINUX_DEFAULT=/c\ GRUB_CMDLINE_LINUX_DEFAULT=\"loglevel=0 console=tty2 udev.log_level=0 vt.global_cursor_default=0 mitigations=off nowatchdog msr.allow_writes=on pcie_aspm=force module.sig_unenforce intel_idle.max_cstate=1 cryptomgr.notests initcall_debug intel_iommu=igfx_off no_timer_check noreplace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable resume=$RESUME" /etc/default/grub
+echo "Done!"
+
+echo "Running update-grub ..."
+sudo update-grub
+echo "Done!"
+
+echo "Removing Artix logo during boot ..."
+sudo rm /etc/issue
+echo "Done!"
+
+echo "Done Optimizing Artix !"
