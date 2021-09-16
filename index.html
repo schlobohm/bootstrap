@@ -9,8 +9,9 @@
         color: white;
     }
 
-    body {
-        background: black;
+    .inner {
+        position: relative;
+        text-align: center;
     }
 
     .wrap::before {
@@ -25,23 +26,47 @@
         opacity: 0.35;
     }
 
-    .inner {
-        position: relative;
+    body {
+        background: black;
+    }
+
+    body p {
+        font-size: 115%;
+    }
+
+    code {
+        color: #0e0;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+
+    h2 {
+        font-size: 175%;
     }
 </style>
 
 <body>
     <div class="wrap">
         <div class="inner">
+            <br />
             <h1>sbone bootstrap</h1>
             <h2>Artix setup</h2>
-            <code>$ curl -L https://bootstrap.schlobohm.one/setup_artix.sh | sh</code>
+            <p>
+                <code>$ curl -L https://bootstrap.schlobohm.one/setup_artix.sh | sh</code>
+            </p>
 
-            <h2>Wallpapers</h2>
-            <b>Current preference:</b> <a
-                href="https://bootstrap.schlobohm.one/papes/1601770590519.jpg">1601770590519.jpg</a>
-            <br>
-            <a href="https://github.com/schlobohm/bootstrap/tree/main/papes">Browse all papes here</a>.
+            <br />
+
+            <h2>wallpapers</h2>
+            <p>
+                current preference: <a
+                    href="https://bootstrap.schlobohm.one/papes/1601770590519.jpg">1601770590519.jpg</a>
+            </p>
+            <p>
+                <a href="https://github.com/schlobohm/bootstrap/tree/main/papes">browse all papes here</a>
+            </p>
         </div>
     </div>
 </body>
