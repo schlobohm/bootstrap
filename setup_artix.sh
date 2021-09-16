@@ -63,7 +63,7 @@ mkdir -p ~/Pictures/papes
 cd ~/Pictures/papes
 
 echo "Downloading wallpaper ..."
-curl -LOJR https://schlobohm.github.io/bootstrap/papes/1601770590519.jpg
+curl -LOJR https://bootstrap.schlobohm.one/papes/1601770590519.jpg
 
 echo "Setting wallpaper ..."
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
