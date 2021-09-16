@@ -10,19 +10,40 @@
     }
 
     body {
+        background: black;
     }
+
+    .wrap::before {
+        content: "";
+        background-image: url('./bg.webp');
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.35;
+    }
+
+    .inner {
+        position: relative;
     }
 </style>
 
 <body>
-    <h1>sbone bootstrap</h1>
-    <h2>Artix setup</h2>
-    <code>$ curl -L https://bootstrap.schlobohm.one/setup_artix.sh | sh</code>
+    <div class="wrap">
+        <div class="inner">
+            <h1>sbone bootstrap</h1>
+            <h2>Artix setup</h2>
+            <code>$ curl -L https://bootstrap.schlobohm.one/setup_artix.sh | sh</code>
 
-    <h2>Wallpapers</h2>
-    <b>Current preference:</b> <a href="https://bootstrap.schlobohm.one/papes/1601770590519.jpg">1601770590519.jpg</a>
-    <br>
-    <a href="https://github.com/schlobohm/bootstrap/tree/main/papes">Browse all papes here</a>.
+            <h2>Wallpapers</h2>
+            <b>Current preference:</b> <a
+                href="https://bootstrap.schlobohm.one/papes/1601770590519.jpg">1601770590519.jpg</a>
+            <br>
+            <a href="https://github.com/schlobohm/bootstrap/tree/main/papes">Browse all papes here</a>.
+        </div>
+    </div>
 </body>
 
 </html>
