@@ -1,7 +1,7 @@
 #!/bin/sh
 # Schlobohm Bootstrapper. 2021. All rights reserved.
 
-PACKAGES=("code" "discord" "dolphin-emu" "gnupg" "jdk-openjdk" "keepassxc" "neovim" "nodejs" "telegram-desktop" "texlive-most" "texmaker" "tmux")
+PACKAGES=("code" "discord" "dolphin-emu" "gnupg" "jdk-openjdk" "keepassxc" "neovim" "nodejs" "telegram-desktop" "texlive-most" "texmaker" "tickrs" "tmux")
 
 echo "
 ----------------------
